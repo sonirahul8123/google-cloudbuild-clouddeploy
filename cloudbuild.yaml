@@ -14,5 +14,5 @@ steps:
     --source=./
     --images=hello-world-app=us-central1-docker.pkg.dev/carbide-algebra-355014/my-docker-repo/hello-world:$SHORT_SHA
  
- options:
+options:
    logging: NONE
