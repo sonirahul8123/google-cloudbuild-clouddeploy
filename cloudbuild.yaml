@@ -2,8 +2,7 @@ steps:
 - name: 'gcr.io/k8s-skaffold/pack'
   entrypoint: 'pack'
   args: ['build', '--builder=gcr.io/buildpacks/builder', '--publish', 'us-central1-docker.pkg.dev/carbide-algebra-355014/my-docker-repo/hello-world:$SHORT_SHA']
-  options:
-    logging: NONE
+ 
 - name: 'gcr.io/google.com/cloudsdktool/cloud-sdk'
   entrypoint: 'bash'
   args:
@@ -14,5 +13,6 @@ steps:
     --region=us-central1
     --source=./
     --images=hello-world-app=us-central1-docker.pkg.dev/carbide-algebra-355014/my-docker-repo/hello-world:$SHORT_SHA
-  options:
-     logging: NONE
+ 
+ options:
+   logging: NONE
